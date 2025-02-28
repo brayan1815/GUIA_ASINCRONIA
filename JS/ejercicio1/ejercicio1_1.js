@@ -16,9 +16,10 @@ const imprimirNumeros=function(desde,hasta){//se declara la funcion imprimiNumer
     console.log(desde); //se muestra el valor de la variable desde
     desde++;//se aumenta uno a la variable desde
     if(desde<=hasta){//si la variable desde es menor o igual a la variable hasta se llamara nuevamente a la funcion imprimirNumeros, el llamado a la funcion se realizara cada 1000 milisegundos (1 segundo)
-    setTimeout(() => {
-        imprimirNumeros(desde,hasta);
-    }, 1000);
+      // setTimeout(() => {
+      //     imprimirNumeros(desde,hasta);
+      // }, 1000);
+      setTimeout(imprimirNumeros, 1000, desde, hasta);
     }
 }
 
