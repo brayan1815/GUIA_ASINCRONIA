@@ -8,10 +8,19 @@ new Promise((resolve, reject) => {
   }, 1000);
 }).then((resultado) => {
   console.log(resultado)
-  return resultado + 1;
+    return new Promise((resolve)=>{
+      setTimeout(() => {
+        resolve(resultado+1)
+      }, 1000);
+    })  
+  
 }).then((resultado) => {
   console.log(resultado)
-  return resultado + 1;
+  return new Promise((resolve)=>{
+    setTimeout(() => {
+      resolve(resultado+1)
+    }, 1000);
+  })
 }).then(console.log);
 
 
