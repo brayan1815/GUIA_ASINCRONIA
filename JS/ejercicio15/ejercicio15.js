@@ -7,4 +7,3 @@ fetch("../JSON/ejercicio15.json").then(function (data) {
     console.log(dato)
   })
 })
-
